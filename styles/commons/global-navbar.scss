@@ -1,2 +1,15 @@
 #global-navbar {
+  border-bottom: 0;
+  background-color: white;
+
+  a {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  li.active a {
+    color: #949b91;
+    background-color: transparent;
+  }
 }

@@ -1,19 +1,22 @@
 import { sprintf } from 'underscore.string';
 
 import { Component, PropTypes } from 'react';
-import { Thumbnail } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
+import { Panel } from 'react-bootstrap';
 
 export default class PortfolioItem extends Component {
   render () {
     const { item } = this.props;
 
     return (
-      <LinkContainer to={ item.path }>
-        <Thumbnail src={ sprintf('%s/thumbnail.png', item.path) }>
-          { item.title }
-        </Thumbnail>
-      </LinkContainer>
+      <Link to={ item.path }>
+        <Panel className="portfolio-item"
+        style={{ 
+          backgroundImage: sprintf('url("%s/thumbnail.png")', item.path) 
+        }}>
+          <h2>{ item.title }</h2>
+        </Panel>
+      </Link>
     );
   }
 }

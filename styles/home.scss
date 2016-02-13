@@ -1,0 +1,53 @@
+@import "compass";
+@import "./commons/utils";
+
+#home {
+  &, .item,
+  h2,
+  [class^="col-"],
+  .panel-body {
+    margin :0;
+    padding: 0;
+  }
+
+  [class^="col-"] {
+    padding-bottom: 100%;
+
+    @include respond-to(sm) {
+      padding-bottom: 16.66666667%;
+    }
+  }
+
+  .portfolio-item {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 0;
+    @include border-radius(0);
+    @include background-size(cover);
+
+    .panel-body {
+      width: 100%;
+      height: 100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      @include opacity(0);
+      @include transition(0.2s);
+
+      h2 {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        font-size: 25px;
+        font-weight: 500;
+        @include transform(translate(-50%, -50%));
+      }
+
+      &:hover {
+        @include opacity(1);
+      }
+    }
+  }
+}

@@ -1,9 +1,0 @@
-@import "compass";
-
-#content {
-  @include transition(0.2s);
-}
-
-#content.blur {
-  @include filter(blur(5px));
-}

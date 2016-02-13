@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { portfolio as portfolioAction } from 'actions';
 
 import { Component } from 'react';
-import { Thumbnail, Pager, PageItem } from 'react-bootstrap';
+import { Col, Thumbnail, Pager, PageItem } from 'react-bootstrap';
 
 export class Portfolio extends Component {
   componentDidMount () {
@@ -29,13 +29,17 @@ export class Portfolio extends Component {
     let innerHTML = { __html: toHTML(portfolio.item) };
 
     return (
-      <div>
+      <div id="portfolio" className="clearfix">
         <Pager>
           <PageItem next onClick={ () => dispatch(portfolioAction.next()) }>next</PageItem>
           <PageItem previous onClick={ () => dispatch(portfolioAction.prev()) }>prev</PageItem>
         </Pager>
-        <Thumbnail src={ sprintf('/portfolio/%s/origin.png', routeParams.title) }/>
-        <article dangerouslySetInnerHTML={ innerHTML }/>
+        <Col sm={ 8 }>
+          <Thumbnail src={ sprintf('/portfolio/%s/origin.png', routeParams.title) }/>
+        </Col>
+        <Col sm={ 4 }>
+          <article dangerouslySetInnerHTML={ innerHTML }/>
+        </Col>
       </div>
     );
   }

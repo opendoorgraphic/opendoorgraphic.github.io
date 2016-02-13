@@ -1,4 +1,4 @@
-import 'styles/welcome.scss';
+import 'styles/home.scss';
 
 import _ from 'lodash';
 import { connect } from 'react-redux';
@@ -12,7 +12,7 @@ export class Home extends Component {
     const { meta } = this.props.portfolio;
 
     return (
-      <Grid>
+      <Grid id="home">
         {
           _.map(meta, (item, index) => {
             return (
