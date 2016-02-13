@@ -1,0 +1,30 @@
+{
+  "name": "riverleo.github.io",
+  "description": "riverleo's portfolio",
+  "main": "index.js",
+  "authors": [
+    "riverleo"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "riverleo"
+  ],
+  "homepage": "https://github.com/riverleo/riverleo.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.5",
+    "react-bootstrap": "~0.28.1",
+    "jquery": "~2.1.4",
+    "underscore.string": "^3.2.3",
+    "bootstrap": "~3.3.6",
+    "markdown": "^0.5.0",
+    "lodash": "^4.2.1"
+  }
+}
