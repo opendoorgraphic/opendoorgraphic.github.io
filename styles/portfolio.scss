@@ -1,3 +1,5 @@
+@import "compass";
+
 #portfolio {
   position: relative;
   margin: 0 auto;
@@ -14,6 +16,19 @@
     width: 100%;
     position: absolute;
     z-index: 1;
+
+    a {
+      padding: 0;
+      border: 0;
+      font-size: 18px;
+      color: rgba(153,156,152,1);
+      background-color: transparent;
+      @include transition(0.2s);
+
+      &:hover {
+        color: rgba(52,59,50,1);
+      }
+    }
 
     .next a {
       margin-right: -50px;

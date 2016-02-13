@@ -16,7 +16,7 @@ export class Home extends Component {
         {
           _.map(meta, (item, index) => {
             return (
-              <Col key={ index } sm={ 2 }>
+              <Col key={ index } sm={ 6 } md={ 4 } lg={ 2 }>
                 <PortfolioItem item={ item }/>
               </Col>
             );

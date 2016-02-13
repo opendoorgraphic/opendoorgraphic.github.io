@@ -1,11 +1,11 @@
-import 'styles/reset.scss';
+import 'styles/commons/_reset.scss';
 import 'styles/app.scss';
 
 import { connect } from 'react-redux';
 import { portfolio as portfolioAction } from 'actions';
 
 import { Component } from 'react';
-import { GlobalNavbar } from 'components/commons';
+import { GlobalNavbar, GlobalFooter } from 'components/commons';
 
 export class App extends Component {
   componentDidMount () {
@@ -21,6 +21,7 @@ export class App extends Component {
       <div id="app">
         <GlobalNavbar/>
         { children }
+        <GlobalFooter/>
       </div>
     );
   }

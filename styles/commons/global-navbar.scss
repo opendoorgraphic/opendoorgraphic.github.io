@@ -1,3 +1,5 @@
+@import "compass";
+
 #global-navbar {
   border-bottom: 0;
   background-color: white;
@@ -16,9 +18,15 @@
   }
 
   a {
+    color: black;
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
+    @include transition(0.2s);
+
+    &:hover, &:focus {
+      color: #949b91;
+    }
   }
 
   li.active a {

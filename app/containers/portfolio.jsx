@@ -31,8 +31,12 @@ export class Portfolio extends Component {
     return (
       <div id="portfolio" className="clearfix">
         <Pager>
-          <PageItem next onClick={ () => dispatch(portfolioAction.next()) }>next</PageItem>
-          <PageItem previous onClick={ () => dispatch(portfolioAction.prev()) }>prev</PageItem>
+          <PageItem next onClick={ () => dispatch(portfolioAction.next()) }>
+            <i className="icon-next"/>
+          </PageItem>
+          <PageItem previous onClick={ () => dispatch(portfolioAction.prev()) }>
+            <i className="icon-previous"/>
+          </PageItem>
         </Pager>
         <Col sm={ 8 }>
           <Thumbnail src={ sprintf('/portfolio/%s/origin.png', routeParams.title) }/>
