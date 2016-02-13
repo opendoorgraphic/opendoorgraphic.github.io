@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3c5312c77449532d9d11"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "682378e70463aff3a338"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -2089,7 +2089,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#global-navbar {\n  border-bottom: 0;\n  background-color: white; }\n  #global-navbar a {\n    font-size: 12px;\n    font-weight: 300;\n    text-transform: uppercase; }\n  #global-navbar li.active a {\n    color: #949b91;\n    background-color: transparent; }\n", ""]);
+	exports.push([module.id, "#global-navbar {\n  border-bottom: 0;\n  background-color: white; }\n  #global-navbar .navbar-brand {\n    padding: 0; }\n  #global-navbar .icon-logo {\n    font-size: 55px;\n    color: black; }\n  #global-navbar .container {\n    padding: 30px 60px; }\n  #global-navbar a {\n    font-size: 12px;\n    font-weight: 300;\n    text-transform: uppercase; }\n  #global-navbar li.active a {\n    color: #949b91;\n    background-color: transparent; }\n", ""]);
 	
 	// exports
 
