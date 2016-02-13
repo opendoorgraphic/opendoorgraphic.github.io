@@ -3,7 +3,7 @@ import 'isomorphic-fetch';
 import _ from 'lodash';
 import { sprintf, contains, startsWith, endsWith } from 'underscore.string';
 
-const API_ROOT = 'http://localhost:3000';
+const API_ROOT = 'http://opendoorgraphic.github.io';
 
 export const api = store => next => action => {
   const { path } = action.payload;
