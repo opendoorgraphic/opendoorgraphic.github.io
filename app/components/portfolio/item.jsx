@@ -1,4 +1,5 @@
 import { sprintf } from 'underscore.string';
+import classNames from 'classnames';
 
 import { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
@@ -9,9 +10,8 @@ export default class PortfolioItem extends Component {
     const { item } = this.props;
 
     return (
-      <Link to={ item.path }>
-        <Panel className="portfolio-item"
-        style={{ 
+      <Link to={ item.path } className={ classNames({ ['size-' + item.size]: true }) }>
+        <Panel className="portfolio-item" style={{
           backgroundImage: sprintf('url("%s/thumbnail.png")', item.path) 
         }}>
           <h2>{ item.title }</h2>

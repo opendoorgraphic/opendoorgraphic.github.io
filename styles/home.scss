@@ -2,19 +2,35 @@
 @import "./commons/utils";
 
 #home {
-  &, .item,
-  h2,
+  &, .item, h2,
   [class^="col-"],
-  .panel-body {
+  .panel, .panel-body {
     margin :0;
     padding: 0;
   }
 
-  [class^="col-"] {
-    padding-bottom: 100%;
+  [class^="col-"] a {
+    float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 99.9%;
 
-    @include respond-to(sm) {
-      padding-bottom: 16.66666667%;
+    &.size-1,
+    &.size-2 {
+      width: 50%;
+
+      @include respond-to(xs) {
+        width: 100%;
+      }
+    }
+
+    &.size-1 {
+      padding-bottom: 50%;
+
+      @include respond-to(xs) {
+        padding-bottom: 99.9%;
+      }
     }
   }
 

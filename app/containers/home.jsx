@@ -11,17 +11,43 @@ export class Home extends Component {
   render () {
     const { meta } = this.props.portfolio;
 
+    var key = 0, square = 0;
+    var items = { 0: [], 1: [], 2: [] };
+
+    _.map(meta, (item, index) => {
+      if (!_.isEqual(index, 0) && _.isEqual(square, 4)) {
+        key++; square = 0;
+
+        if (_.isEqual(key, 3)) { key = 0; }
+      }
+
+      square += item.size;
+      items[key].push(item);
+    });
+
     return (
       <Grid id="home">
-        {
-          _.map(meta, (item, index) => {
-            return (
-              <Col key={ index } sm={ 6 } md={ 4 } lg={ 2 }>
-                <PortfolioItem item={ item }/>
-              </Col>
-            );
-          })
-        }
+        <Col md={ 4 }>
+          {
+            _.map(items[0], (item, index) => {
+              return <PortfolioItem key={ index } item={ item }/>;
+            })
+          }
+        </Col>
+        <Col md={ 4 }>
+          {
+            _.map(items[1], (item, index) => {
+              return <PortfolioItem key={ index } item={ item }/>;
+            })
+          }
+        </Col>
+        <Col md={ 4 }>
+          {
+            _.map(items[2], (item, index) => {
+              return <PortfolioItem key={ index } item={ item }/>;
+            })
+          }
+        </Col>
       </Grid>
     );
   }
