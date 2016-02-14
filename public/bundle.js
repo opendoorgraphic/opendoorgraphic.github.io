@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2618d4778e650287cc31"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "78e555d213a383ef0f39"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -2161,7 +2161,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#portfolio {\n  position: relative;\n  margin: 0 auto;\n  max-width: 1100px; }\n  #portfolio [class^=\"col-\"],\n  #portfolio .thumbnail {\n    margin: 0;\n    padding: 0; }\n  #portfolio .pager {\n    top: 50%;\n    width: 100%;\n    position: absolute;\n    z-index: 1; }\n    #portfolio .pager a {\n      padding: 0;\n      border: 0;\n      font-size: 18px;\n      color: #999c98;\n      background-color: transparent;\n      -webkit-transition: 0.2s false false;\n      -moz-transition: 0.2s false false false;\n      -o-transition: 0.2s false false false;\n      transition: 0.2s; }\n      #portfolio .pager a:hover {\n        color: #343b32; }\n    #portfolio .pager .next a {\n      margin-right: -50px; }\n    #portfolio .pager .previous a {\n      margin-left: -50px; }\n  #portfolio .thumbnail {\n    border: 0; }\n    #portfolio .thumbnail img {\n      width: 100%; }\n", ""]);
+	exports.push([module.id, "#portfolio {\n  position: relative;\n  margin: 0 auto;\n  max-width: 1100px; }\n  #portfolio [class^=\"col-\"],\n  #portfolio .thumbnail {\n    margin: 0;\n    padding: 0; }\n  #portfolio .pager {\n    top: 50%;\n    width: 100%;\n    position: absolute;\n    z-index: 1; }\n    #portfolio .pager a {\n      padding: 0;\n      border: 0;\n      font-size: 18px;\n      color: #999c98;\n      background-color: transparent;\n      -webkit-transition: 0.2s false false;\n      -moz-transition: 0.2s false false false;\n      -o-transition: 0.2s false false false;\n      transition: 0.2s; }\n      #portfolio .pager a:hover {\n        color: #343b32; }\n    #portfolio .pager .next a {\n      margin-right: -50px; }\n    #portfolio .pager .previous a {\n      margin-left: -50px; }\n  #portfolio .thumbnail {\n    border: 0;\n    padding: 0 20px 0 0; }\n    #portfolio .thumbnail img {\n      width: 100%; }\n", ""]);
 	
 	// exports
 
