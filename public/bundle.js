@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "78e555d213a383ef0f39"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7ae56b32575b597b7288"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -5560,6 +5560,7 @@
 	          null,
 	          'this is what we do'
 	        ),
+	        React.createElement('img', { src: '/public/about-image/photo.jpg' }),
 	        React.createElement(
 	          'p',
 	          null,
@@ -9678,7 +9679,7 @@
 	  return repeat("0", maxLength - num.toString().length) + num;
 	};
 	var formatTime = function formatTime(time) {
-	  return " @ " + pad(time.getHours(), 2) + ":" + pad(time.getMinutes(), 2) + ":" + pad(time.getSeconds(), 2) + "." + pad(time.getMilliseconds(), 3);
+	  return "@ " + pad(time.getHours(), 2) + ":" + pad(time.getMinutes(), 2) + ":" + pad(time.getSeconds(), 2) + "." + pad(time.getMilliseconds(), 3);
 	};
 	
 	// Use the new performance api to get better precision if available
@@ -9769,6 +9770,7 @@
 	  function printBuffer() {
 	    logBuffer.forEach(function (logEntry, key) {
 	      var started = logEntry.started;
+	      var startedTime = logEntry.startedTime;
 	      var action = logEntry.action;
 	      var prevState = logEntry.prevState;
 	      var error = logEntry.error;
@@ -9782,14 +9784,13 @@
 	      }
 	      // message
 	      var formattedAction = actionTransformer(action);
-	      var time = new Date(started);
 	      var isCollapsed = typeof collapsed === "function" ? collapsed(function () {
 	        return nextState;
 	      }, action) : collapsed;
 	
-	      var formattedTime = formatTime(time);
+	      var formattedTime = formatTime(startedTime);
 	      var titleCSS = colors.title ? "color: " + colors.title(formattedAction) + ";" : null;
-	      var title = "action " + formattedAction.type + (timestamp ? formattedTime : "") + (duration ? " in " + took.toFixed(2) + " ms" : "");
+	      var title = "action " + (timestamp ? formattedTime : "") + " " + formattedAction.type + " " + (duration ? "(in " + took.toFixed(2) + " ms)" : "");
 	
 	      // render
 	      try {
@@ -9834,6 +9835,7 @@
 	        logBuffer.push(logEntry);
 	
 	        logEntry.started = timer.now();
+	        logEntry.startedTime = new Date();
 	        logEntry.prevState = stateTransformer(getState());
 	        logEntry.action = action;
 	

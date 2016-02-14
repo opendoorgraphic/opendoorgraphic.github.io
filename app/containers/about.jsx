@@ -9,6 +9,7 @@ export class About extends Component {
     return (
       <div id="about">
         <h2>this is what we do</h2>
+        <img src="/public/about-image/photo.jpg"/>
         <p>
           We are a fairly small, flexible design studio that designs for print and web.
           We work flexibly with clients to fulfil their design needs.
